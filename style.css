@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container{
+    background-color: #fff;
+    width: 1300px;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+nav{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;    
+}
+
+nav ul.parent_ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    position: relative;
+}
+
+nav ul.parent_ul li a{
+    display: block; 
+    padding: 12px 15px;
+}
+
+nav ul.parent_ul li a:hover{
+    color: #ef4a23;
+}
+
+nav ul.parent_ul li ul.child_ul1{
+    position: absolute; 
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 250px;
+    top: 80px; 
+    left: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+
+nav ul.parent_ul li:hover ul.child_ul1{
+    visibility: visible;
+    top: 40px;
+}
+
+nav ul.parent_ul li ul.child_ul1 li:hover a {
+    background-color: #ef4a23;
+    color: #fff;
+}
+
+nav ul.parent_ul li ul.child_ul1 li:hover ul.child_ul2 a {
+    background-color: #fff;
+    color: black;
+}
+
+nav ul.child_ul1 li ul.child_ul2{
+    position: absolute; 
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 250px;
+    visibility: hidden;
+    top: 0;     
+    left: 100%; 
+}
+
+nav ul.child_ul1 li:hover ul.child_ul2{
+    visibility: visible;
+}
+
+
+nav ul.parent_ul li ul.child_ul1 li ul.child_ul2 li:hover a {
+    background-color: #ef4a23;
+    color: #fff;
+}
